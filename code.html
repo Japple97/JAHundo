@@ -57,7 +57,7 @@
                         </li>
                         <li class="nav-item">
                             <!--LINK PORTFOLIO-->
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="https://ja-cf-portfolio.netlify.app/">About</a>
                         </li>
                         <li class="nav-item">
                             <!--TO DO-->
@@ -123,7 +123,7 @@
                             if(value % 2==0) { className='even' ; } 
                             else { className='odd' ; } 
                             if (index % 5==0) { 
-                                tableHtml +='&lt tr &gt' ; } let tableRow=`&lt td class="${className}"&gt ${value} &lt /td &gt`;
+            tableHtml +='&lt tr &gt' ; } let tableRow=`&lt td class="${className}"&gt ${value} &lt /td &gt`;
                     
                         tableHtml = tableHtml + tableRow;
                         //tableHtml += tableRow;
@@ -141,10 +141,25 @@
             </div>
             <!--Code Description-->
             <div class="col-12 col-lg-4">
-                <p>The code is structured in three different functions.</p>
-                <p>The first function gets the values from user input, and makes sure they are indeed numbers.</p>
-                <p>The second function generates those numbers into an array.</p>
-                <p>The third and final function displays those numbers in a table in different ways depending on if the number is even or odd.</p>
+                <p>This code is a JavaScript implementation of a simple web application that generates numbers within a given range, and
+                displays them in a table on a web page.</p>
+                <p>The main function "getValues" is a controller function that is responsible for getting the input values from the web
+                page, verifying that the inputs are valid integers, and then generating and displaying the numbers on the page.</p>
+                <p>The function first gets the values entered by the user into the 'startValue' and 'endValue' text fields on the page
+                using the 'document.getElementById' method. It then parses the inputs as integers using the 'parseInt' method.</p>
+                <p>The code then checks to see if the inputs are valid integers using the 'Number.isInteger' method. If the inputs are
+                valid integers, the code calls the 'generateNumbers' function to generate the numbers between the start and end values.
+                The generated numbers are then passed to the 'displayNumbers' function to be displayed on the page.</p>
+                <p>If the inputs are not valid integers, a SweetAlert is displayed to the user with an error message.</p>
+                <p>The 'generateNumbers' function takes in two arguments, 'start' and 'end', which are the start and end values entered by
+                the user. The function uses a for loop to generate an array of numbers within the given range and returns the generated
+                array.</p>
+                <p>The 'displayNumbers' function takes in an array of numbers and uses the 'innerHTML' property to insert the numbers into
+                the table on the page. The function first creates an empty string called 'tableHtml' to store the HTML for the table. It
+                then loops through the array of numbers and creates a table row for every 5 numbers. The function uses the modulo
+                operator to determine if a number is even or odd, and adds a class name of 'even' or 'odd' to each number accordingly.
+                The function then concatenates the HTML for each number to the 'tableHtml' string and sets the 'innerHTML' of the
+                'results' table body to the 'tableHtml' string when all the numbers have been processed.</p>
             </div>
         </div>
     </main>
